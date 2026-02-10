@@ -20,6 +20,46 @@
             key-positions = <52 42 0>; // Press 52=LOWER, 42=[, 0=tilde
             bindings = <&bt BT_CLR>; // activate clear bluetooth bindings for current channel
         };
+
+        qmark {
+            bindings = <&kp QMARK>;
+            key-positions = <16 15>;
+        };
+
+        slash {
+            bindings = <&kp SLASH>;
+            key-positions = <28 27>;
+        };
+
+        lp {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <15 27>;
+        };
+
+        lpa {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <16 28>;
+        };
+
+        lb {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <29 17>;
+        };
+
+        rb {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <19 31>;
+        };
+
+        rp {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <19 31>;
+        };
+
+        rba {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <20 32>;
+        };
     };
 
     keymap {
@@ -53,11 +93,11 @@
             //                       |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&kp F12        &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                    &kp F6          &kp F7     &kp F8            &kp F9     &kp F10   &kp F11
-&kp GRAVE      &kp N1  &kp N2  &kp N3  &kp N4  &kp N5                    &kp N6          &kp N7     &kp N8            &kp N9     &kp N0    &kp MINUS
-&mt LCTRL ESC  &kp N6  &kt N7  &kp N8  &kp N9  &kp N0                    &kp MINUS       &kp EQUAL  &kp SINGLE_QUOTE  &kp GRAVE  &trans    &trans
-&kp LSHIFT     &trans  &trans  &trans  &trans  &trans  &trans    &trans  &kp UNDERSCORE  &kp PLUS   &kp EQUAL         &kp LBKT   &kp RBKT  &kp RIGHT_SHIFT
-                               &trans  &trans  &trans  &trans    &trans  &trans          &trans     &trans
+&kp F12        &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                    &kp F6          &kp F7     &kp F8            &kp F9     &kp F10   &kp F11
+&kp GRAVE      &trans        &trans        &trans        &trans        &trans                    &trans          &trans     &trans            &trans     &trans    &trans
+&mt LCTRL ESC  &kp NUMBER_1  &kt NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                    &kp MINUS       &kp EQUAL  &kp SINGLE_QUOTE  &kp GRAVE  &trans    &trans
+&kp LSHIFT     &kp NUMBER_6  &kp N7        &kp N8        &kp N9        &kp N0  &trans    &trans  &kp UNDERSCORE  &kp PLUS   &kp EQUAL         &kp LBKT   &kp RBKT  &kp RIGHT_SHIFT
+                                           &trans        &trans        &trans  &trans    &trans  &trans          &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -72,11 +112,11 @@
             //                               |      |       |      |       |  |         |      |       |       |
 
             bindings = <
-&trans      &bt BT_SEL 0    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                     &trans     &trans          &trans        &trans    &trans    &trans
-&trans      &bt BT_CLR_ALL  &trans        &trans        &trans        &bt BT_CLR                       &trans     &trans          &trans        &kp LBKT  &kp RBKT  &kp BSLH
-&kp TILDE   &kp EXCL        &kp AT        &kp HASH      &kp DOLLAR    &kp PRCNT                        &kp CARET  &mmv MOVE_LEFT  &mmv MOVE_UP  &kp LPAR  &kp RPAR  &kp UNDER
-&kp LSHIFT  &trans          &trans        &kp LPAR      &kp LBRC      &trans        &trans    &kp DEL  &kp RBRC   &kp RPAR        &kp KP_PLUS   &kp LBRC  &kp RBRC  &kp RSHFT
-                                          &trans        &trans        &trans        &trans    &trans   &trans     &trans          &trans
+&trans      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4                     &trans          &trans          &trans        &trans           &trans    &trans
+&trans      &trans        &trans        &trans        &trans        &bt BT_CLR                       &trans          &trans          &trans        &kp LBKT         &kp RBKT  &kp BSLH
+&kp TILDE   &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PRCNT                        &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &kp RPAR  &kp UNDER
+&kp LSHIFT  &trans        &trans        &kp LPAR      &kp LBRC      &trans        &trans    &kp DEL  &kp RBRC        &kp RPAR        &kp KP_PLUS   &kp LBRC         &kp RBRC  &kp RSHFT
+                                        &trans        &trans        &trans        &trans    &trans   &trans          &trans          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
