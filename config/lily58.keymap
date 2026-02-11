@@ -48,7 +48,7 @@
 
         rb {
             bindings = <&kp RIGHT_BRACE>;
-            key-positions = <19 31>;
+            key-positions = <18 30>;
         };
 
         rp {
@@ -98,11 +98,11 @@
             //                       |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&kp F12  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                    &kp F6          &kp F7     &kp F8            &kp F9     &kp F10   &kp F11
-&trans   &kp TILDE     &kp SQT       &kp GRAVE     &trans        &trans                    &kp DELETE      &trans     &trans            &trans     &trans    &trans
-&trans   &kp NUMBER_1  &kt NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                    &kp MINUS       &kp EQUAL  &kp SINGLE_QUOTE  &kp GRAVE  &trans    &trans
-&trans   &kp NUMBER_6  &kp N7        &kp N8        &kp N9        &kp N0  &trans    &trans  &kp UNDERSCORE  &kp PLUS   &kp EQUAL         &kp LBKT   &kp RBKT  &kp RIGHT_SHIFT
-                                     &trans        &trans        &trans  &trans    &trans  &trans          &trans     &trans
+&kp F12  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                         &kp F6          &kp F7         &kp F8            &kp F9                &kp F10                &kp F11
+&trans   &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                    &kp CARET       &kp AMPERSAND  &kp STAR          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+&trans   &kp NUMBER_1  &kt NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                         &kp MINUS       &kp EQUAL      &kp SINGLE_QUOTE  &kp GRAVE             &trans                 &trans
+&trans   &kp NUMBER_6  &kp N7        &kp N8        &kp N9        &kp N0       &trans    &trans  &kp UNDERSCORE  &kp PLUS       &kp EQUAL         &kp LBKT              &kp RBKT               &kp RIGHT_SHIFT
+                                     &trans        &trans        &trans       &trans    &trans  &trans          &trans         &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
