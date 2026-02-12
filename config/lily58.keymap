@@ -83,7 +83,7 @@
 &kp TAB    &kp Q   &kp W   &kp E     &kp R      &kp T                          &kp Y          &kp U   &kp I      &kp O    &kp P     &kp ESCAPE
 &kp LCTRL  &kp A   &kp S   &kp D     &kp F      &kp G                          &kp H          &kp J   &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LSHFT  &kp Z   &kp X   &kp C     &kp V      &kp B   &kp LBKT     &kp RBKT  &kp N          &kp M   &kp COMMA  &kp DOT  &kp FSLH  &kp RSHFT
-                           &kp LALT  &kp LMETA  &mo 2   &kp SPACE    &kp RET   &kp BACKSPACE  &mo 1   &kp RCTRL
+                           &kp LALT  &kp LMETA  &mo 2   &kp SPACE    &kp RET   &kp BACKSPACE  &mo 1   &to 3
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -98,11 +98,11 @@
             //                       |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&kp F12  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                         &kp F6          &kp F7         &kp F8            &kp F9                &kp F10                &kp F11
-&trans   &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                    &kp CARET       &kp AMPERSAND  &kp STAR          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
-&trans   &kp NUMBER_1  &kt NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                         &kp MINUS       &kp EQUAL      &kp SINGLE_QUOTE  &kp GRAVE             &kp TILDE              &trans
-&trans   &kp NUMBER_6  &kp N7        &kp N8        &kp N9        &kp N0       &trans    &trans  &kp UNDERSCORE  &kp PLUS       &kp EQUAL         &kp LBKT              &kp RBKT               &kp RIGHT_SHIFT
-                                     &trans        &trans        &trans       &trans    &trans  &trans          &trans         &trans
+&kp F12  &kp F1        &kp F2        &kp F3        &kp F4        &kp F5                                   &kp F6          &kp F7         &kp F8            &kp F9                &kp F10                &kp F11
+&trans   &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PERCENT                              &kp CARET       &kp AMPERSAND  &kp STAR          &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans
+&trans   &kp NUMBER_1  &kt NUMBER_2  &kp NUMBER_3  &kp NUMBER_4  &kp N5                                   &kp MINUS       &kp EQUAL      &kp SINGLE_QUOTE  &kp GRAVE             &kp TILDE              &trans
+&trans   &kp NUMBER_6  &kp N7        &kp N8        &kp N9        &kp N0       &kp PG_UP    &kp PAGE_DOWN  &kp UNDERSCORE  &kp PLUS       &kp EQUAL         &kp LBKT              &kp RBKT               &kp RIGHT_SHIFT
+                                     &trans        &trans        &trans       &trans       &trans         &trans          &trans         &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
