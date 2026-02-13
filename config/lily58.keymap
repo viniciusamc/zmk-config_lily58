@@ -131,12 +131,19 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans    &trans                      &trans          &trans          &trans        &trans           &trans  &trans
 &trans  &trans  &trans  &trans  &trans    &trans                      &trans          &trans          &trans        &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &mkp MB1  &mkp MB2                    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
+&trans  &trans  &trans  &trans  &mkp LCLK  &mkp RCLK                    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
 &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans  &trans          &trans          &trans        &trans           &trans  &trans
                         &trans  &trans    &trans    &trans    &trans  &trans          &trans          &trans
             >;
         };
     };
 
-    conditional_layers { compatible = "zmk,conditional-layers"; };
+    conditional_layers {
+        compatible = "zmk,conditional-layers";
+
+        and {
+            if-layers = <1 2>;
+            then-layer = <3>;
+        };
+    };
 };
