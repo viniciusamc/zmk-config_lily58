@@ -19,9 +19,10 @@
 #
 ---
 include:
+  # No studio-rpc-usb-uart snippet: it breaks BT mode switching (see `save`
+  # branch, 763191e). Studio itself stays enabled via the cmake-arg below.
   - board: nice_nano@2.0.0//zmk
     shield: lily58_left
-    snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
   - board: nice_nano@2.0.0//zmk
     shield: lily58_right
