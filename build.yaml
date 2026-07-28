@@ -21,8 +21,18 @@
 include:
   # No studio-rpc-usb-uart snippet: it breaks BT mode switching (see `save`
   # branch, 763191e). Studio itself stays enabled via the cmake-arg below.
+  # Studio lives on the central, which is the dongle now.
+  - board: nice_nano@2.0.0//zmk
+    shield: lily58_dongle
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
+  # The in-tree lily58_left shield defaults to central; force it off so both
+  # halves are peripherals of the dongle.
   - board: nice_nano@2.0.0//zmk
     shield: lily58_left
-    cmake-args: -DCONFIG_ZMK_STUDIO=y
+    cmake-args: -DCONFIG_ZMK_SPLIT_ROLE_CENTRAL=n
   - board: nice_nano@2.0.0//zmk
     shield: lily58_right
+  # Must be flashed on all three devices before the dongle firmware: old split
+  # bonds point the halves at each other.
+  - board: nice_nano@2.0.0//zmk
+    shield: settings_reset
